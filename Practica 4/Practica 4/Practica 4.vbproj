@@ -119,5 +119,17 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1731664017-apple-watch-10-67371865a87cc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1731664017-apple-watch-10-67371865a87cc1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajustes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

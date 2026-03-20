@@ -33,8 +33,10 @@ Partial Class Form1
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label = New System.Windows.Forms.Label()
+        Me.Segundos = New System.Windows.Forms.Label()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -132,6 +134,8 @@ Partial Class Form1
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.Segundos)
+        Me.Panel1.Controls.Add(Me.ComboBox1)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Label)
         Me.Panel1.Location = New System.Drawing.Point(77, 109)
@@ -139,6 +143,24 @@ Partial Class Form1
         Me.Panel1.Size = New System.Drawing.Size(369, 198)
         Me.Panel1.TabIndex = 7
         Me.Panel1.Visible = False
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Blanco", "Rojo", "Azul", "Amarillo", "Verde"})
+        Me.ComboBox1.Location = New System.Drawing.Point(121, 110)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(126, 21)
+        Me.ComboBox1.TabIndex = 2
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(22, 58)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(44, 39)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Label
         '
@@ -150,14 +172,14 @@ Partial Class Form1
         Me.Label.TabIndex = 0
         Me.Label.Text = "Configuraciones"
         '
-        'Button1
+        'Segundos
         '
-        Me.Button1.Location = New System.Drawing.Point(22, 58)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(44, 39)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Segundos.AutoSize = True
+        Me.Segundos.Location = New System.Drawing.Point(307, 25)
+        Me.Segundos.Name = "Segundos"
+        Me.Segundos.Size = New System.Drawing.Size(39, 13)
+        Me.Segundos.TabIndex = 8
+        Me.Segundos.Text = "Label2"
         '
         'Form1
         '
@@ -195,4 +217,6 @@ Partial Class Form1
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button1 As Button
     Friend WithEvents Label As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Segundos As Label
 End Class

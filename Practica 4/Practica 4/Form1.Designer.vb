@@ -31,21 +31,29 @@ Partial Class Form1
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Segundos = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Reset = New System.Windows.Forms.Button()
         Me.Start = New System.Windows.Forms.Button()
         Me.Tiempo = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Segundos = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label = New System.Windows.Forms.Label()
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -132,56 +140,6 @@ Partial Class Form1
         Me.Panel1.TabIndex = 7
         Me.Panel1.Visible = False
         '
-        'Panel2
-        '
-        Me.Panel2.Controls.Add(Me.Reset)
-        Me.Panel2.Controls.Add(Me.Start)
-        Me.Panel2.Controls.Add(Me.Tiempo)
-        Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Location = New System.Drawing.Point(77, 109)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(369, 198)
-        Me.Panel2.TabIndex = 9
-        Me.Panel2.Visible = False
-        '
-        'Reset
-        '
-        Me.Reset.Location = New System.Drawing.Point(205, 117)
-        Me.Reset.Name = "Reset"
-        Me.Reset.Size = New System.Drawing.Size(83, 26)
-        Me.Reset.TabIndex = 4
-        Me.Reset.Text = "Reset"
-        Me.Reset.UseVisualStyleBackColor = True
-        '
-        'Start
-        '
-        Me.Start.Location = New System.Drawing.Point(97, 117)
-        Me.Start.Name = "Start"
-        Me.Start.Size = New System.Drawing.Size(71, 30)
-        Me.Start.TabIndex = 3
-        Me.Start.Text = "Start"
-        Me.Start.UseVisualStyleBackColor = True
-        '
-        'Tiempo
-        '
-        Me.Tiempo.AutoSize = True
-        Me.Tiempo.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Tiempo.Location = New System.Drawing.Point(115, 58)
-        Me.Tiempo.Name = "Tiempo"
-        Me.Tiempo.Size = New System.Drawing.Size(167, 33)
-        Me.Tiempo.TabIndex = 1
-        Me.Tiempo.Text = "00:00:00:00"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(125, 13)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(134, 25)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Cronometro"
-        '
         'Segundos
         '
         Me.Segundos.AutoSize = True
@@ -219,8 +177,81 @@ Partial Class Form1
         Me.Label.TabIndex = 0
         Me.Label.Text = "Configuraciones"
         '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.Panel3)
+        Me.Panel2.Controls.Add(Me.Reset)
+        Me.Panel2.Controls.Add(Me.Start)
+        Me.Panel2.Controls.Add(Me.Tiempo)
+        Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Location = New System.Drawing.Point(77, 109)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(369, 198)
+        Me.Panel2.TabIndex = 9
+        Me.Panel2.Visible = False
+        '
+        'Reset
+        '
+        Me.Reset.Location = New System.Drawing.Point(205, 117)
+        Me.Reset.Name = "Reset"
+        Me.Reset.Size = New System.Drawing.Size(83, 26)
+        Me.Reset.TabIndex = 4
+        Me.Reset.Text = "Reset"
+        Me.Reset.UseVisualStyleBackColor = True
+        '
+        'Start
+        '
+        Me.Start.Location = New System.Drawing.Point(97, 117)
+        Me.Start.Name = "Start"
+        Me.Start.Size = New System.Drawing.Size(71, 30)
+        Me.Start.TabIndex = 3
+        Me.Start.Text = "Start"
+        Me.Start.UseVisualStyleBackColor = True
+        '
+        'Tiempo
+        '
+        Me.Tiempo.AutoSize = True
+        Me.Tiempo.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Tiempo.Location = New System.Drawing.Point(111, 52)
+        Me.Tiempo.Name = "Tiempo"
+        Me.Tiempo.Size = New System.Drawing.Size(167, 33)
+        Me.Tiempo.TabIndex = 1
+        Me.Tiempo.Text = "00:00:00:00"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(125, 13)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(134, 25)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Cronometro"
+        '
         'Timer3
         '
+        Me.Timer3.Interval = 1
+        '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.Button3)
+        Me.Panel3.Controls.Add(Me.Button2)
+        Me.Panel3.Controls.Add(Me.Label4)
+        Me.Panel3.Controls.Add(Me.Label3)
+        Me.Panel3.Location = New System.Drawing.Point(0, 0)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(369, 198)
+        Me.Panel3.TabIndex = 11
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.Practica_4.My.Resources.Resources.reloj_de_arena
+        Me.PictureBox4.Location = New System.Drawing.Point(275, 310)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(49, 38)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox4.TabIndex = 12
+        Me.PictureBox4.TabStop = False
         '
         'PictureBox3
         '
@@ -253,13 +284,52 @@ Partial Class Form1
         Me.PictureBox1.TabIndex = 5
         Me.PictureBox1.TabStop = False
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(78, 18)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(193, 31)
+        Me.Label3.TabIndex = 10
+        Me.Label3.Text = "Temporizador"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(132, 67)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(87, 31)
+        Me.Label4.TabIndex = 11
+        Me.Label4.Text = "00:00"
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(40, 142)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(81, 31)
+        Me.Button2.TabIndex = 12
+        Me.Button2.Text = "Start"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(225, 142)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(81, 31)
+        Me.Button3.TabIndex = 13
+        Me.Button3.Text = "Stop"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(530, 450)
-        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Fecha)
@@ -274,6 +344,9 @@ Partial Class Form1
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -303,4 +376,10 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents Timer3 As Timer
     Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
 End Class
